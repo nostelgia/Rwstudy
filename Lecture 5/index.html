@@ -4,21 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>하노이탑</title>
-    <p>하노이의 탑</p>
-    <button style="float: left;">초기화</button>
-    <style>
-        div{
-            width: 250px;
-            height: 400px;
-            float: left;
-            margin: 10px;
-        }
-    </style>
+    <script src="hanoi.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    
 </head>
 <body>
-    <div style="border: 1px solid red;"></div>
-    <div style="border: 1px solid green;"></div>
-    <div style="border: 1px solid blue;"></div>
+    <p>하노이의 탑</p>
+    <form id="form_box" method="get" action="style.css">
+        <input id="button_reset" type="reset" value="초기화" onclick="Init()">
+    </form>
+    <div class="parent">
+        <div class="first">
+            first
+            <br>
+            🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
+            <br>
+            🟨🟨🟨🟨🟨🟨🟨🟨🟨
+            <br>
+            🟩🟩🟩🟩🟩🟩🟩
+            <br>
+            🟦🟦🟦🟦🟦
+            <br>
+            🟪🟪🟪
+            <br>
+            ⬛
+        </div>
+        <div class="second">second</div>
+        <div class="third">third</div>
+    </div>
 </body>
 </html>
