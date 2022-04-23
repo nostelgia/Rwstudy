@@ -6,7 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="hanoi.js"></script>
     <link rel="stylesheet" href="style.css" type="text/css">
-    
+    <script>
+        function allowDrop(ev)
+        {
+            ev.preventDefault();
+        }
+        function drag(ev)
+        {
+            ev.dataTransfer.setData("Text",ev.target.id);
+        }
+        function drop(ev){
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("Text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
 </head>
 <body>
     <p>하노이의 탑</p>
@@ -14,23 +28,31 @@
         <input id="button_reset" type="reset" value="초기화" onclick="Init()">
     </form>
     <div class="parent">
-        <div class="first">
+        <div id="first"ondrop="drop(event)" ondragover="allowDrop(event)">
             first
-            <br>
+            <div id="red" draggable="true" ondragstart="drag(evnet)">
             🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥🟥
-            <br>
+            </div>
+            <div id="yellow" draggable="true">
             🟨🟨🟨🟨🟨🟨🟨🟨🟨
-            <br>
+            </div>
+            <div id="green"draggable="true">
             🟩🟩🟩🟩🟩🟩🟩
-            <br>
+            </div>
+            <div id="blue"draggable="true">
             🟦🟦🟦🟦🟦
-            <br>
+            </div>
+            <div id="purple"draggable="true">
             🟪🟪🟪
-            <br>
+            </div>
+            <div id="black"draggable="true">
             ⬛
+            </div>
         </div>
-        <div class="second">second</div>
-        <div class="third">third</div>
+        <div id="second" ondrop="drop(event)" ondragover="allowDrop(event)">
+            second</div>
+        <div id="third" ondrop="drop(event)" ondragover="allowDrop(event)">
+            third</div>
     </div>
 </body>
 </html>

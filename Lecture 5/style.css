@@ -1,24 +1,21 @@
 .parent{
     display: inline-flex;
 }
-.first{width: 250px;
+#first{width: 250px;
     height: 400px;
     text-align: center;
     margin: 10px;
     float: left;
     border: solid red 2px;}
-.second{width: 250px;
+#second{width: 250px;
     height: 400px;
     text-align: center;
     margin: 10px;
     float: left;
     border: solid green 2px;}
-.third{width: 250px;
+#third{width: 250px;
     height: 400px;
     text-align: center;
     margin: 10px;
     float: left;
     border: solid blue 2px;}
-#button_reset{
-    
-}
