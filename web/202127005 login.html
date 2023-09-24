@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>Document</title>
+    <style>
+        .box1{width: 800px;height: 100px; background-color: bisque;text-align: center;}
+        .box2{width: 600px; height: 500px; background-color: aqua; margin-left: 200px;}
+        .box3{width: 200px; height: 500px; background-color: darkslateblue; margin-top: -500px;}
+        .btn{display: flex;flex-direction: column;align-items: center;}
+        #profile-img{position: absolute;left: 50px;}
+        #profile-name{margin-left: -400px;}
+        #logout{margin-left: -400px;}
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <img src="angry.png" width="100px" height="100px" alt="" id="profile-img">
+        <p id="profile-name">정기준</p>
+        <button id="logout">
+            <a href="202127005.html">로그아웃</a>
+        </button>
+    </div>
+    <div class="box2"></div>
+    <div class="box3">
+        <div class="btn">
+        <button onclick="btn1()">버튼1</button>
+        <p id="text1"></p>
+        <button onclick="btn2()">버튼2</button>
+        <p id="text2"></p>
+        <button onclick="btn3()">버튼3</button>
+        <p id="text3"></p>
+    </div>
+    </div>
+    <script>
+    function btn1(){
+        document.getElementById("text1").innerHTML = 
+        "이름:정기준<br> 나이:23<br>  학과:게임앱학과<br>"
+    };
+    function btn2(){
+        document.getElementById("text2").innerHTML = 
+        "두려워요!"
+    };
+    function btn3(){
+        document.getElementById("text3").innerHTML = 
+        "저장되었습니다"
+    };
+    </script>
+</body>
+</html>
